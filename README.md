@@ -1,8 +1,8 @@
 # SITO DEL SOCIALBAN
 
 ## Creatori:
-Simone Michelon
-Davide Chigliaro
-Sandro di Silvestro
-Kamer Hasa
-Alex 
+Simone Michelon<br>
+Davide Chigliaro<br>
+Sandro di Silvestro<br>
+Kamer Hasa<br>
+Alex <br>

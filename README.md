@@ -1,6 +1,6 @@
-#SITO DEL SOCIALBAN
+# SITO DEL SOCIALBAN
 
-##Creatori:
+## Creatori:
 Simone Michelon
 Davide Chigliaro
 Sandro di Silvestro

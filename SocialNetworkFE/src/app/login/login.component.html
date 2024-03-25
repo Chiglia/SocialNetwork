@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SocialBan</title>
+</head>
+<body>
+    <!-- Contenitore principale -->
+    <div class="hero">
+        <!-- Contenitore del form -->
+        <div class="form-box">
+            <!-- Contenitore dei pulsanti di toggle -->
+            <div class="button-box">
+                <!-- Effetto visivo per il pulsante di toggle -->
+                <div id="btn"></div>
+                <!-- Pulsante per il login -->
+                <button type="button" class="toggle-btn" (click)="login()">Login</button>
+                <!-- Pulsante per la registrazione -->
+                <button type="button" class="toggle-btn" (click)="register()">Register</button>
+            </div>
+                <form id="login" class="input-group">
+                    <!-- Campi di input per l'ID utente e la password -->
+                    <input type="text" class="input-field" placeholder="User Id" required>
+                    <input type="password" class="input-field" placeholder="Enter Password" required>
+                    <!-- Pulsante per inviare il modulo di login -->
+                    <button type="submit" id="submit-btn-login" class="submit-btn">Login</button>
+                </form>
+                <!-- Form di registrazione -->
+                <form id="register" class="input-group">
+                    <!-- Campi di input per i dati personali dell'utente -->
+                    <input type="text" class="input-field" placeholder="Name" required>
+                    <input type="text" class="input-field" placeholder="Surname" required>
+                    <input type="text" class="input-field" placeholder="E-mail" required>
+                    <input type="text" class="input-field" placeholder="Address" required>
+                    <input type="text" class="input-field" placeholder="SSN" required>
+                    <!-- Campo di input per la password di registrazione -->
+                    <input type="password" class="input-field" placeholder="Enter Password" required>
+                    <!-- Checkbox per accettare i termini e le condizioni -->
+                    <input type="checkbox" class="chech-box"><span>I agree to the terms & conditions</span>
+                    <!-- Pulsante per inviare il modulo di registrazione -->
+                    <button type="submit" id="submit-btn-register" class="submit-btn">Register</button>
+                </form>
+            </div>
+        <!-- Form di login -->   
+    </div>
+</body>
+</html>
+

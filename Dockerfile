@@ -8,25 +8,27 @@ WORKDIR /app
 COPY SocialNetworkFE /app/frontend
 
 # Copia il codice della backend nella directory /app/backend
-COPY SocialNetworkBE /app/backend
+# COPY SocialNetworkBE /app/backend
 
 # Installa le dipendenze per la frontend
 WORKDIR /app/frontend
 RUN npm install
 
 # Installa le dipendenze per la backend
-WORKDIR /app/backend
-RUN npm install
+# WORKDIR /app/backend
+# RUN npm install
 
 # Builda la frontend
-WORKDIR /app/frontend
-RUN npm run build
+# WORKDIR /app/frontend
+# RUN npm run build
+EXPOSE ${ENV_PORT}
+CMD ["npm","run","start"]
 
 # Esponi la porta sulla quale il server sarà in ascolto (sostituisci con la porta corretta)
-EXPOSE ${ENV_PORT}
+# EXPOSE ${ENV_PORT}
 
-WORKDIR /app/backend
+# WORKDIR /app/backend
 
 # Comando per avviare il server che gestisce sia la frontend che la backend
-CMD ["npm","start"]
+# CMD ["npm","start"]
 

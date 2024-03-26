@@ -6,10 +6,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HomeController {
 
-	@GetMapping
-	public String homeController() {
-		return "Benvenuto nel sito";
-	}
-
-	
+    @GetMapping
+    public String homeController() {
+        return "Benvenuto nel sito";
+    }
 }

@@ -22,61 +22,60 @@ import com.SCAI.socialBan.service.UserService;
 @RestController
 @RequestMapping("api/post")
 public class PostController {
-	
+
 	@Autowired
 	private PostService postService;
-	
+
 	@Autowired
 	private UserService userService;
-	
+
 	@PostMapping("")
 	public Post createPost(@RequestBody Post post, @RequestHeader("Authorization") String jwt) throws Exception {
 		User user = userService.findUserByJwt(jwt);
-		Post createdPost =  postService.createPost(post, user);
-		
+		Post createdPost = postService.createPost(post, user);
+
 		return createdPost;
 	}
-	
+
 	@GetMapping("")
 	public List<Post> getAllPost() throws Exception {
 		List<Post> posts = postService.findAllPost();
-		
+
 		return posts;
 	}
-	
+
 	@DeleteMapping("/{postId}")
-	public String deletePost(@PathVariable Long postId) throws Exception {
-		postService.deletePost(postId);
-		
+	public String deletePost(@PathVariable Long postId, @RequestHeader("Authorization") String jwt) throws Exception {
+		postService.deletePost(postId, jwt);
+
 		return "Post deleted successfully";
-			
+
 	}
-	
+
 	@PutMapping("/{id}")
-	public Post updatePost(@RequestBody Post post, @PathVariable Long id) throws Exception {
-		Post updatedPost = postService.updatePost(post, id);
+	public Post updatePost(@RequestBody Post post, @PathVariable Long id, @RequestHeader("Authorization") String jwt)
+			throws Exception {
+
+		Post updatedPost = postService.updatePost(post, id, jwt);
 		return updatedPost;
 	}
-	
+
 	@PutMapping("/{id}/like")
 	public Post likePost(@PathVariable Long id, @RequestHeader("Authorization") String jwt) throws Exception {
 		User user = userService.findUserByJwt(jwt);
-		
+
 		Post updatedPost = postService.likePost(id, user);
 		return updatedPost;
 	}
-	
+
 	@PutMapping("/{id}/comment")
-	public Post commentPost(@PathVariable Long id, @RequestHeader("Authorization") String jwt, @RequestBody Comment comment) throws Exception{
+	public Post commentPost(@PathVariable Long id, @RequestHeader("Authorization") String jwt,
+			@RequestBody Comment comment) throws Exception {
 		User user = userService.findUserByJwt(jwt);
-		
+
 		Post updatePost = postService.commentPost(id, user, comment.getText());
-		
+
 		return updatePost;
 	}
-	
-	
-	
-	
 
 }

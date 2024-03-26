@@ -8,28 +8,32 @@ import { Component } from '@angular/core';
 export class LoginComponent {
 
   login() {
-    const formBox = document.querySelector('.input-group');
-    const btn = document.getElementById('btn');
-    if (formBox && btn) {
-        formBox.classList.add('form-right');
-        formBox.classList.remove('form-left');
+    const inputGroup = document.querySelector('.input-group') as HTMLElement;
+    const formBox = document.querySelector('.form-box') as HTMLElement;
+    const btn = document.getElementById('btn') as HTMLElement;
+    if (inputGroup && btn) {
+        formBox.classList.remove('height1');
+        formBox.classList.add('height2');
+        inputGroup.classList.add('form-right');
+        inputGroup.classList.remove('form-left');
         btn.classList.add('button-right');
         btn.classList.remove('button-left');
     }
-}
+  }
 
   register() {
-    const formBox = document.querySelector('.input-group');
-    const btn = document.getElementById('btn');
-    if (formBox && btn) {
-        formBox.classList.add('form-left');
-        formBox.classList.remove('form-right');
+    const inputGroup = document.querySelector('.input-group') as HTMLElement;
+    const formBox = document.querySelector('.form-box') as HTMLElement;
+    const btn = document.getElementById('btn') as HTMLElement;
+    if (inputGroup && btn) {
+        formBox.classList.add('height1');
+        formBox.classList.remove('height2');
+        inputGroup.classList.add('form-left');
+        inputGroup.classList.remove('form-right');
         btn.classList.add('button-left');
         btn.classList.remove('button-right');
     }
-}
-
-
+  }
 
   submitLogin() {
     // Handle login form submission logic here
@@ -38,5 +42,4 @@ export class LoginComponent {
   submitRegister() {
     // Handle registration form submission logic here
   }
-
 }

@@ -24,4 +24,5 @@ public class User {
 	private String email;
 	private String fullName;
 	private String dob;
+	private String imgProfile;
 }

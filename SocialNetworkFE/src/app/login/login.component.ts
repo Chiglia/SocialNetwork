@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { AuthService } from "../services/auth-service";
 
 @Component({
   selector: "app-login",
@@ -7,8 +8,7 @@ import { Component } from "@angular/core";
 })
 export class LoginComponent {
   
-  
-  constructor() {}
+  constructor(private authService: AuthService) {}
 
   login() {
     const inputGroup = document.querySelector(".input-group") as HTMLElement;
@@ -24,7 +24,7 @@ export class LoginComponent {
     }
   }
 
-  register() {
+register() {
     const inputGroup = document.querySelector(".input-group") as HTMLElement;
     const formBox = document.querySelector(".form-box") as HTMLElement;
     const btn = document.getElementById("btn") as HTMLElement;

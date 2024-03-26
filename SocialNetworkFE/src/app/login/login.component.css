@@ -52,7 +52,7 @@
 
 .form-box {
     width: 21.75rem;
-    height: 24.25rem;
+    height: 23.5rem;
     left: 0;
     right: 0;
     top: 0;
@@ -61,7 +61,7 @@
     margin: 2rem;
     overflow: hidden;
     background: rgba(255, 255, 255, 0.14);
-    border-radius: 0.2rem;
+    border-radius: 0.1rem;
     box-shadow: 0 0.25rem 2rem rgba(212, 212, 212, 0.1);
     backdrop-filter: blur(0.25rem);
     -webkit-backdrop-filter: blur(0.25rem);
@@ -179,11 +179,11 @@
 }
 
 .height1 {
-    height: 34.75rem;
+    height: 34rem;
 }
 
 .height2 {
-    height: 24.25rem;
+    height: 23.5rem;
 }
 
 ::placeholder{

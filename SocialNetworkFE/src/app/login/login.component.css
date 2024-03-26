@@ -3,11 +3,11 @@
     text-shadow: 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.2);
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome, Edge, Opera and Firefox */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                        supported by Chrome, Edge, Opera and Firefox */
 }
 
 .hero {
@@ -24,25 +24,7 @@
     justify-content: center;
 }
 
-.form-box {
-    width: 21.75rem;
-    height: 24.25rem;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    padding: 0.3rem;
-    margin: 2rem;
-    overflow: hidden;
-    background: rgba(255, 255, 255, 0.14);
-    border-radius: 0.2rem;
-    box-shadow: 0 0.25rem 2rem rgba(212, 212, 212, 0.1);
-    backdrop-filter: blur(0.25rem);
-    -webkit-backdrop-filter: blur(0.25rem);
-    border: 1px solid rgba(255, 255, 255, 0.81);
-    position: relative;
-    transition: height 0.5s; /* Aggiungi la transizione per l'altezza */
-}
+/*-----LEFT COLUMN-----*/
 
 .left-column {
     padding: 0.3rem;
@@ -66,6 +48,27 @@
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+/*-----RIGHT COLUMN-----*/
+
+.form-box {
+    width: 21.75rem;
+    height: 24.25rem;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 0.3rem;
+    margin: 2rem;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.14);
+    border-radius: 0.2rem;
+    box-shadow: 0 0.25rem 2rem rgba(212, 212, 212, 0.1);
+    backdrop-filter: blur(0.25rem);
+    -webkit-backdrop-filter: blur(0.25rem);
+    border: 1px solid rgba(255, 255, 255, 0.81);
+    position: relative;
+    transition: height 0.5s; /* Aggiungi la transizione per l'altezza */
+}
 
 .socialban img{
     width: 14rem;
@@ -175,30 +178,25 @@
     transition: transform 0.5s;
 }
 
-::placeholder{
-    color: rgba(235, 235, 235, 0.85) !important;
-}
-
-.tacbox {
-    display: flex;
-    font-size: 70%;
-    margin-top: 1rem;
-}
-
-.applinks-container
-
-.applinks {
-    width: 6rem !important;
-    height: 2rem !important;
-}
-
 .height1 {
-    height: 35.25rem;
+    height: 34.75rem;
 }
 
 .height2 {
     height: 24.25rem;
 }
+
+::placeholder{
+    color: rgba(235, 235, 235, 0.85) !important;
+}
+
+.terms {
+    display: flex;
+    font-size: 70%;
+    margin-top: 1rem;
+}
+
+/*-----BREAKPOINTS COLUMN-----*/
 
 @media only screen and (max-width: 900px) {
     .left-column {

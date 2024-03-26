@@ -7,9 +7,8 @@ services:
       dockerfile: Dockerfile
     ports: 
       - ${ENV_PORT}:${ENV_PORT}
-    # volumes: 
-    #   - ./SocialNetworkBE:/app
-    #   - ./SocialNetworkFE/dist/social-network:/app/public
+    environment:
+      - ENV_PORT=${ENV_PORT}
     depends_on: 
       - mysql_server  
 

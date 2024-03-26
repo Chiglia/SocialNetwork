@@ -1,34 +1,17 @@
-# Usa un'immagine di base di Node.js
-FROM node:latest
+# Usa un'immagine di base di OpenJDK per Java 17
+FROM openjdk:17-jdk-alpine
 
-# Imposta la directory di lavoro nell'immagine
+# Definisci la directory di lavoro nell'immagine
 WORKDIR /app
 
-# Copia il codice della frontend nella directory /app/frontend
-COPY SocialNetworkFE /app/frontend
+# Copia il file JAR dell'applicazione Spring Boot nella directory dell'immagine
+COPY SocialNetworkBE/target/*.jar app.jar
 
-# Copia il codice della backend nella directory /app/backend
-# COPY SocialNetworkBE /app/backend
+# Copia il contenuto della directory di Angular nella directory /app/frontend del container
+COPY SocialNetworkFE/dist/social-network /app/frontend
 
-# Installa le dipendenze per la frontend
-WORKDIR /app/frontend
-RUN npm install
-
-# Installa le dipendenze per la backend
-# WORKDIR /app/backend
-# RUN npm install
-
-# Builda la frontend
-# WORKDIR /app/frontend
-# RUN npm run build
+# Esponi la porta 8080 su cui sarà in ascolto l'applicazione Spring Boot
 EXPOSE ${ENV_PORT}
-CMD ["npm","run","start"]
 
-# Esponi la porta sulla quale il server sarà in ascolto (sostituisci con la porta corretta)
-# EXPOSE ${ENV_PORT}
-
-# WORKDIR /app/backend
-
-# Comando per avviare il server che gestisce sia la frontend che la backend
-# CMD ["npm","start"]
-
+# Comando per avviare l'applicazione Spring Boot quando il container viene avviato
+CMD ["java","-jar","app.jar"]

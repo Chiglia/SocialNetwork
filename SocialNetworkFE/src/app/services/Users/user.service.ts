@@ -6,7 +6,7 @@ import { BehaviorSubject, Observable, catchError, tap, throwError } from "rxjs";
   providedIn: "root",
 })
 export class UserService {
-  private baseUrl = "http://localhost:5454";
+  private baseUrl = "https://dev.chiglia.ovh";
 
   constructor(private http: HttpClient) {}
 
